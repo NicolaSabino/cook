@@ -1,0 +1,26 @@
+{
+    "title": "Cost json schema",
+    "description": "The cost in currency or as indication",
+    "oneOf": [
+        {
+            "description": "The cost expressed as currency value",
+            "type": "object",
+            "properties":{
+                "value": {
+                    "description": "The scalar value",
+                    "type": "number"
+                },
+                "currency": {
+                    "description": "The currency type",
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "description": "The cost indication between 1 and 5",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+        }
+    ]
+}

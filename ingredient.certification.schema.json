@@ -1,0 +1,18 @@
+{
+    "title": "Certifications json schema",
+    "description": "Allowed food certifications",
+    "type": "string",
+    "enum": [
+        "DOP",
+        "DOC",
+        "IGP",
+
+        "Casherut",
+        "Halal",
+
+        "Vegan",
+        "Vegetarian",
+        "Gluten free",
+        "Sugar free"
+    ]
+}

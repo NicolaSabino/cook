@@ -1,0 +1,26 @@
+{
+    "title": "Quantity object json schema",
+    "description": "A quantity of an ingredient, with or without the unit of measure",
+    "type": "object",
+    "properties": {
+        "value": {
+            "description": "The scalar value of the quantity",
+            "type": "number"
+        },
+        "uom": {
+            "description": "The unit of measure according the SI system.",
+            "type": "string",
+            "enum": [
+                "g",
+                "kg",
+                "s",
+                "ms",
+                "cal",
+                "kcal"
+            ]
+        }
+    },
+    "required": [
+        "value"
+    ]
+}

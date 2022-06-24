@@ -1,0 +1,31 @@
+{
+    "title": "Macro nutrients object json schema",
+    "description": "The amount of macro nutrients contained in a meal",
+    "type": "object",
+    "properties": {
+        "carbs": {
+            "$ref": "quantity"
+        },
+        "sugar": {
+            "$ref": "quantity"
+        },
+        "protein": {
+            "$ref": "quantity"
+        },
+        "fats": {
+            "$ref": "quantity"
+        },
+        "saturated_fats": {
+            "$ref": "quantity"
+        },
+        "fibers": {
+            "$ref": "quantity"
+        },
+        "cholesterol": {
+            "$ref": "quantity"
+        },
+        "sodium": {
+            "$ref": "quantity"
+        }
+    }
+}

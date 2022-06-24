@@ -1,0 +1,10 @@
+{
+    "description": "No specific quantity",
+    "type": "string",
+    "enum": [
+        "qb",
+        "q.b.",
+        "a.n.",
+        "as needed"
+    ]
+}

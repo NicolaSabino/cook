@@ -1,0 +1,45 @@
+{
+    "title": "Ingredient object json schema",
+    "description": "An ingredient used in a meal or receipt",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The ingredient name",
+            "type": "string"
+        },
+        "quantity": {
+            "description": "The ingredient quantity",
+            "oneOf": [
+                {
+                    "$ref": "./quantity.schema.json"
+                },
+                {
+                    "$ref": "./qb.schema.json"
+                }
+            ]
+        },
+        "brand": {
+            "description": "The brand that produce the ingredient",
+            "type": "string"
+        },
+        "link": {
+            "description": "The product link",
+            "type": "string"
+        },
+        "certification": {
+            "description": "Product certification",
+            "type": "array",
+            "items": {
+                "$ref": "./ingredient.certification.schema.json"
+            }
+        },
+        "ingredients": {
+            "description": "The sub-ingredients",
+            "$ref": "./ingredients.schema.json"
+        }
+    },
+    "required": [
+        "name",
+        "quantity"
+    ]
+}

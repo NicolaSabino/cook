@@ -1,0 +1,60 @@
+{
+    "title": "Receipt file json schema",
+    "description": "It define a receipt object",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": "The receipt version identifier",
+            "type": "string"
+        },
+        "encoding": {
+            "description": "The receipt encoding version",
+            "type": "string"
+        },
+        "type": {
+            "description": "The object type",
+            "type": "string"
+        },
+        "name": {
+            "description": "The receipt name",
+            "type": "string"
+        },
+        "difficulty": {
+            "description": "The difficulty level",
+            "type": "string",
+            "enum": [
+                "easy",
+                "medium",
+                "complex",
+                "hard"
+            ]
+        },
+        "cost":{
+            "description": "The cost of the meal, indicatively or precisely",
+            "$ref": "./cost.schema.json"
+        },
+        "portions":{
+            "description": "The number of portions",
+            "type": "integer",
+            "minimum": 1,
+            "default": 1
+        },
+        "calories_per_portion":{
+            "description": "The energy per portion",
+            "$ref": "./quantity.schema.json"
+        },
+        "macro_nutrients":{
+            "$ref": "./macro.nutrients.schema.json"
+        },
+        "ingredients": {
+            "description": "The receipt ingredients",
+            "$ref" : "./ingredients.schema.json"
+        }
+    },
+    "required": [
+        "version",
+        "type",
+        "name",
+        "ingredients"
+    ]
+}
