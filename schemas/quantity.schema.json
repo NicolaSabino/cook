@@ -9,15 +9,28 @@
             "type": "number"
         },
         "uom": {
+            "$comment": "The unit of measure can have a prefix to express multiples",
             "description": "The unit of measure according the SI system.",
             "type": "string",
-            "enum": [
-                "g",
-                "kg",
-                "s",
-                "ms",
-                "cal",
-                "kcal"
+            "oneOf": [
+                {
+                    "title": "The grams unit of measure",
+                    "pattern": "^(m|c|da|h|k)?g$"
+                },
+                {
+                    "title": "The calories unit of measure",
+                    "enum": [
+                        "cal",
+                        "kcal"
+                    ]
+                },
+                {
+                    "title": "The liter unit of measure",
+                    "enum": [
+                        "l",
+                        "dl"
+                    ]
+                }
             ]
         }
     },
