@@ -1,4 +1,6 @@
 {
+    "$id": "/schemas/qb.schema.json",
+    "title": "`Quanto basta` validation schema",
     "description": "No specific quantity",
     "type": "string",
     "enum": [

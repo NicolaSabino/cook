@@ -1,0 +1,8 @@
+{
+    "$id": "/schemas/name.schema.json",
+    "title": "The name json schema",
+    "description": "It describe the structure of a name in the cook file",
+    "type": "string",
+    "minLength": 3,
+    "maxLength": 60
+}

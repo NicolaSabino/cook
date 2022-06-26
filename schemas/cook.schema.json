@@ -1,23 +1,28 @@
 {
+    "$id": "/schemas/cook.schema.json",
+    "$comment": "version 0.0.0",
     "title": "Receipt file json schema",
     "description": "It define a receipt object",
     "type": "object",
     "properties": {
         "version": {
             "description": "The receipt version identifier",
-            "type": "string"
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
         },
         "encoding": {
             "description": "The receipt encoding version",
             "type": "string"
         },
-        "type": {
-            "description": "The object type",
-            "type": "string"
-        },
         "name": {
             "description": "The receipt name",
-            "type": "string"
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 60
+        },
+        "ingredients": {
+            "description": "The receipt ingredients",
+            "$ref": "ingredients.schema.json"
         },
         "difficulty": {
             "description": "The difficulty level",
@@ -29,31 +34,26 @@
                 "hard"
             ]
         },
-        "cost":{
+        "cost": {
             "description": "The cost of the meal, indicatively or precisely",
-            "$ref": "./cost.schema.json"
+            "$ref": "cost.schema.json"
         },
-        "portions":{
+        "portions": {
             "description": "The number of portions",
             "type": "integer",
             "minimum": 1,
             "default": 1
         },
-        "calories_per_portion":{
+        "calories_per_portion": {
             "description": "The energy per portion",
-            "$ref": "./quantity.schema.json"
+            "$ref": "quantity.schema.json"
         },
-        "macro_nutrients":{
-            "$ref": "./macro.nutrients.schema.json"
-        },
-        "ingredients": {
-            "description": "The receipt ingredients",
-            "$ref" : "./ingredients.schema.json"
+        "macro_nutrients": {
+            "$ref": "macro.nutrients.schema.json"
         }
     },
     "required": [
         "version",
-        "type",
         "name",
         "ingredients"
     ]

@@ -1,4 +1,5 @@
 {
+    "$id": "/schemas/cost.schema.json",
     "title": "Cost json schema",
     "description": "The cost in currency or as indication",
     "oneOf": [

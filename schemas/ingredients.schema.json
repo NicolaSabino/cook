@@ -1,10 +1,11 @@
 {
+    "$id": "/schemas/ingredients.schema.json",
     "title": "Ingredients list json schema",
     "description": "A list of ingredients used in a meal or receipt",
     "type": "array",
     "items": {
         "description": "The ingredient",
-        "$ref": "./ingredient.schema.json"
+        "$ref": "ingredient.schema.json"
     },
     "minItems":1
 }

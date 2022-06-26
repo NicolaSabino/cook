@@ -1,4 +1,5 @@
 {
+    "$id": "/schemas/ingredient.certification.schema.json",
     "title": "Certifications json schema",
     "description": "Allowed food certifications",
     "type": "string",
@@ -6,10 +7,8 @@
         "DOP",
         "DOC",
         "IGP",
-
         "Casherut",
         "Halal",
-
         "Vegan",
         "Vegetarian",
         "Gluten free",

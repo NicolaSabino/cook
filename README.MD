@@ -1,6 +1,5 @@
 # The cooking file system
  
-## Abstract
 Even if we live in digital modern times, food is still treated analogically.
 
 To obtain infos about a product we have to read the label squashed in few squared centimeters. The expiration date is just printed on the box and it makes tricky to add more details on what we are eating!

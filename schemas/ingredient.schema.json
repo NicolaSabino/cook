@@ -1,20 +1,23 @@
 {
+    "$id": "/schemas/ingredient.schema.json",
     "title": "Ingredient object json schema",
     "description": "An ingredient used in a meal or receipt",
     "type": "object",
     "properties": {
         "name": {
             "description": "The ingredient name",
-            "type": "string"
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 60
         },
         "quantity": {
             "description": "The ingredient quantity",
             "oneOf": [
                 {
-                    "$ref": "./quantity.schema.json"
+                    "$ref": "quantity.schema.json"
                 },
                 {
-                    "$ref": "./qb.schema.json"
+                    "$ref": "qb.schema.json"
                 }
             ]
         },
@@ -30,12 +33,12 @@
             "description": "Product certification",
             "type": "array",
             "items": {
-                "$ref": "./ingredient.certification.schema.json"
+                "$ref": "ingredient.certification.schema.json"
             }
         },
         "ingredients": {
             "description": "The sub-ingredients",
-            "$ref": "./ingredients.schema.json"
+            "$ref": "ingredients.schema.json"
         }
     },
     "required": [
